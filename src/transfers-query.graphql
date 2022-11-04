@@ -1,0 +1,23 @@
+query transfers @live {
+    transfers (first: 5, orderBy: tokenId, orderDirection: desc) {
+      id
+      from
+      to
+      tokenId
+      balanceOf
+      tokenURI
+    }
+}
+
+query transfersOfUser($address: Bytes) @live {
+    transfers (
+        where: {to: $address}
+      ) {
+      id
+      from
+      to
+      tokenId
+      balanceOf
+      tokenURI
+    }
+}

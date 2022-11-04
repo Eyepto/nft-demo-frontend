@@ -1,0 +1,12 @@
+sources:
+  - name: DemoNFT
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/devzl/eyepto-demo-nft
+
+plugins:
+  - pollingLive:
+      defaultInterval: 1000
+
+documents:
+  - ./src/transfers-query.graphql
