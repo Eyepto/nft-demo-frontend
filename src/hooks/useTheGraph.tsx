@@ -1,7 +1,7 @@
 import { useQuery } from 'urql'
-import { transfersDocument, transfersOfUserDocument, transfersQuery } from '../../.graphclient'
+import { transfersDocument, transfersOfUserDocument } from '../../.graphclient'
 
-// Retrieve transfers data from TheGraph
+// Retrieve transfers data from our subgraph (TheGraph)
 function useTheGraph(userAddress : string | JSX.Element) {
   const [transfersResult, reexecuteTransfersQuery] = useQuery({
     query: transfersDocument,
@@ -31,4 +31,4 @@ function useTheGraph(userAddress : string | JSX.Element) {
   })
 }
 
-export default useTheGraph
+export default useTheGraph;

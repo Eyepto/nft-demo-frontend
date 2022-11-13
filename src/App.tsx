@@ -5,7 +5,8 @@ import { transfersQuery } from '../.graphclient'
 
 import QRCode from "react-qr-code";
 import { useMemo } from 'react';
-import { isAddress } from 'ethers/lib/utils'
+
+import { isAddress } from './utils'
 
 import useInput from "./utils/useInput"
 
